@@ -7,8 +7,6 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
-	"reflect"
-	"strings"
 )
 
 // addError adds error to error list
@@ -50,12 +48,7 @@ func (d *Driver) isDBOpened() bool {
 }
 
 func (d *Driver) getEntityName() (string, error) {
-	typeName := strings.Split(reflect.TypeOf(d.entityDealingWith).String(), ".")
-	if len(typeName) <= 0 {
-		return "", fmt.Errorf("unable to infer the type of the entity passed")
-	}
-
-	return typeName[len(typeName)-1], nil
+	return d.entityDealingWith.Name, nil
 }
 
 func (d *Driver) readAppend(entity interface{}) (err error) {

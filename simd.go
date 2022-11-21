@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/fourhu/elemental"
+	"go.aporeto.io/elemental"
 	"sync"
 )
 
