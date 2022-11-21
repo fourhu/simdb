@@ -12,6 +12,6 @@ require (
 )
 
 replace (
-	github.com/sonyarouje/simdb => github.com/fourhu/simdb v0.0.0-20211206052426-fe51fa8cf30d
+	github.com/sonyarouje/simdb => github.com/fourhu/simdb v0.0.0-20221121041954-9c5818c56e85
 	go.aporeto.io/elemental => github.com/fourhu/elemental v0.0.0-20220831102436-5e4f85e59198
 )
